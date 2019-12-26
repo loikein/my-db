@@ -1,0 +1,19 @@
+---
+layout: default
+title: Watched List
+---
+
+<!-- Watched List -->
+{% assign movie = site.data.watched %}
+{% assign list = movie | sort:"title" %}
+
+<!-- Document -->
+
+{% for movie in list %}
+
+<ul>
+<li><strong>{{ movie.title }}</strong> ({{ movie.intro }}, {{ movie.comments }})</li>
+</ul>
+
+{% endfor %}
+
